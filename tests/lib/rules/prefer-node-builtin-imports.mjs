@@ -3,6 +3,7 @@ import { getTester } from "./utils/test.mjs";
 
 const { test } = getTester(import.meta);
 
+//import
 test.snapshot({
   valid: [
     'import unicorn from "unicorn";',
@@ -10,50 +11,50 @@ test.snapshot({
     'import fs from "unknown-builtin-module";',
     'import fs from "node:fs";',
     outdent`
-			async function foo() {
-				const fs = await import(fs);
-			}
-		`,
+    	async function foo() {
+    		const fs = await import(fs);
+    	}
+    `,
     outdent`
-			async function foo() {
-				const fs = await import(0);
-			}
-		`,
+    	async function foo() {
+    		const fs = await import(0);
+    	}
+    `,
     outdent`
-			async function foo() {
-				const fs = await import(\`fs\`);
-			}
-		`,
+    	async function foo() {
+    		const fs = await import(\`fs\`);
+    	}
+    `,
     'import "punycode/";',
   ],
   invalid: [
     'import fs from "fs";',
     'export {promises} from "fs";',
     outdent`
-			async function foo() {
-				const fs = await import('fs');
-			}
-		`,
+    	async function foo() {
+    		const fs = await import('fs');
+    	}
+    `,
     'import fs from "fs/promises";',
     'export {default} from "fs/promises";',
     outdent`
-			async function foo() {
-				const fs = await import('fs/promises');
-			}
-		`,
+    	async function foo() {
+    		const fs = await import('fs/promises');
+    	}
+    `,
     'import {promises} from "fs";',
     'export {default as promises} from "fs";',
     "import {promises} from 'fs';",
     outdent`
-			async function foo() {
-				const fs = await import("fs/promises");
-			}
-		`,
+    	async function foo() {
+    		const fs = await import("fs/promises");
+    	}
+    `,
     outdent`
-			async function foo() {
-				const fs = await import(/* escaped */"\\u{66}s/promises");
-			}
-		`,
+    	async function foo() {
+    		const fs = await import(/* escaped */"\\u{66}s/promises");
+    	}
+    `,
     'import "buffer";',
     'import "child_process";',
     'import "timers/promises";',
