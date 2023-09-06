@@ -8,6 +8,10 @@
     "eslint-plugin"
   ],
   "author": "Mikhail Pertsev",
+  "files": [
+    "lib",
+    "docs"
+  ],
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {
@@ -16,9 +20,6 @@
     "lint:js": "eslint .",
     "test": "mocha tests --recursive",
     "update:eslint-docs": "eslint-doc-generator"
-  },
-  "dependencies": {
-    "requireindex": "^1.2.0"
   },
   "devDependencies": {
     "@babel/code-frame": "^7.22.13",
