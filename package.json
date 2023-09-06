@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-prefer-node-builtin-imports",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ESlint plugin to change imports of builtin node modules to 'node:MODULE_NAME'",
   "keywords": [
     "eslint",

@@ -17,7 +17,6 @@ function normalizeInvalidTest(test, rule) {
   const { code, output, errors } = test;
 
   if (code === output) {
-    console.log(JSON.stringify(test, undefined, 2));
     throw new Error("Remove output if your test do not fix code.");
   }
 
@@ -150,7 +149,6 @@ function getTester(importMeta) {
 const addComment = (test, comment) => {
   const { code, output } = test;
 
-  console.log("from gjskgkdsj", comment);
   const fixedTest = {
     ...test,
     code: `${code}\n/* ${comment} */`,
