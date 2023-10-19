@@ -11,6 +11,8 @@ test.snapshot({
     'import fs from "unknown-builtin-module";',
     'import fs from "node:fs";',
     outdent`
+
+    
     	async function foo() {
     		const fs = await import(fs);
     	}
