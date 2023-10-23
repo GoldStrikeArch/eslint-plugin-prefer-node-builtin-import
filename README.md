@@ -3,7 +3,7 @@
 ESlint plugin to change imports of builtin node modules to &#39;node:MODULE_NAME&#39;
 This is a minimalistic (without additional dependencies) implemenation of [eslint-plugin-unicorn-prefer-node-protocol-rule](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-node-protocol.md). It uses the same test cases as the unicorn version.
 
-Shoutout to @alex-kinokon and @sindresorhus for inspiration.
+Shoutout to @alex-kinokon and @sindresorhus for inspiration dsadas.
 
 ## Installation
 
