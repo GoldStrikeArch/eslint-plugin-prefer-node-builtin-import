@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-prefer-node-builtin-imports",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ESlint plugin to change imports of builtin node modules to 'node:MODULE_NAME'",
   "keywords": [
     "eslint",
@@ -18,7 +18,7 @@
     "lint": "npm-run-all \"lint:*\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint .",
-    "test": "mocha tests --recursive",
+    "test": "ava ./tests/lib/rules/prefer-node-builtin-imports.mjs",
     "update:eslint-docs": "eslint-doc-generator"
   },
   "devDependencies": {

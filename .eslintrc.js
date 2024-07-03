@@ -9,6 +9,7 @@ module.exports = {
   ],
   env: {
     node: true,
+    esnext: true
   },
   overrides: [
     {
